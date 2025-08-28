@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>itsvortexx.space</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-w7JWzK6nqjzPj0o6V7tFq8k+6KZkqO2+2kWl8c7LQp0p0ZsBzQjhM6hzW03V4L6F2Kb3V6R+0a8XQ5A+1Z0s1WQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #020024, #000000 70%);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ff00ff, #00ffff, #ff0000, #00ff00);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientAnimation 5s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(0, 0, 30, 0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 200, 255, 0.2);
+    }
+    nav h1 {
+      font-size: 1.5em;
+      color: #00d9ff;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00d9ff;
+    }
+
+    .container {
+      display: flex;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .profile {
+      flex: 1;
+      max-width: 300px;
+      text-align: left;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #00d9ff;
+      margin-bottom: 15px;
+    }
+    .profile h2 {
+      font-size: 1.8em;
+      margin: 5px 0;
+    }
+    .profile p {
+      font-size: 0.95em;
+      color: #bbb;
+    }
+    .profile .info {
+      margin-top: 20px;
+    }
+    .profile .info div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .icon {
+      color: #00d9ff;
+    }
+
+    .socials {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+    .social-icon {
+      font-size: 1.5em;
+      padding: 10px;
+      border-radius: 50%;
+      background: rgba(0,0,30,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: 0.3s;
+      border: 1px solid rgba(0,217,255,0.2);
+    }
+    .social-icon:hover {
+      background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #00ff00);
+      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform: translateY(-3px);
+    }
+
+    .content {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .achievements, .tools {
+      background: rgba(0, 0, 30, 0.6);
+      backdrop-filter: blur(12px);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
+    }
+    .achievements h3, .tools h3 {
+      color: #00d9ff;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .tile {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 15px;
+      transition: 0.3s;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+    }
+    .tile:hover {
+      background: rgba(0, 217, 255, 0.1);
+      transform: translateY(-5px);
+    }
+    .tile h4 {
+      margin: 0 0 8px;
+      color: #fff;
+    }
+    .tile p {
+      font-size: 0.9em;
+      color: #bbb;
+    }
+  </style>
+  <script>
+    function updateClock() {
+      const options = { timeZone: "America/Denver", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+      const now = new Intl.DateTimeFormat("en-US", options).format(new Date());
+      document.getElementById("clock").textContent = now;
+    }
+    setInterval(updateClock, 1000);
+    window.onload = updateClock;
+  </script>
+</head>
+<body>
+  <nav>
+    <h1 class="gradient-text">itsvortexx.space</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="business.html">Switch to Business</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Profile Section -->
+    <div class="profile">
+      <img src="https://codehs.com/uploads/d96a87854775dfa012eafcee7995035e" alt="Profile Picture">
+      <h2 class="gradient-text">1Vortexx</h2>
+      <p>Hi, I'm <span class="gradient-text">1Vortexx</span>. I am a software developer from the US. I enjoy programming and writing Discord Bots. I thrive with website development & my company DevSolutions Systems Inc.</p>
+      <div class="info">
+        <div>
+          <i class="fas fa-clock icon"></i>
+          <span><b>My Current Time:</b> </span>
+          <span id="clock"></span>
+        </div>
+      </div>
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href="https://www.tiktok.com/" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.twitch.tv/" target="_blank" class="social-icon"><i class="fab fa-twitch"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="https://discord.com/" target="_blank" class="social-icon"><i class="fab fa-discord"></i></a>
+        <a href="https://yourfirstdomain.com" target="_blank" class="social-icon"><i class="fas fa-globe"></i></a>
+        <a href="https://yourseconddomain.com" target="_blank" class="social-icon"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <div class="achievements">
+        <h3>My Projects & Professions</h3>
+        <div class="grid">
+          <div class="tile">
+            <h4>X-ORBIT Browser</h4>
+            <p>A <a href="https://xorbit.org">web-based proxy browser</a> that allows students and users to bypass blocking and filtering tools and access the web from within.</p>
+          </div>
+          <div class="tile">
+            <h4>LumiCore Neo v3</h4>
+            <p>A webOS developed for the peak purpose of operating the <a href="https://devsolutionssystemsinc.store">DevSolutions Dashboard</a>. Written in HTML, CSS, & JS.</p>
+          </div>
+          <div class="tile">
+            <h4>BrickMaster</h4>
+            <p>The #1 <a href="https://brickmasterbot.xyz">Brick Rigs Discord Manager Bot</a>. Just surpassing over 2K active users this month, BrickMaster is by far one of my most successful projects.</p>
+          </div>
+          <div class="tile">
+            <h4>DevSolutions Systems Inc.</h4>
+            <p>Currently leading as the Executive Developer & Founder of DevSolutions Systems, I work alongside my co-workers and colleagues to deliver bots and server revamps to clients as they please</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tools">
+        <h3>Tools & Skills</h3>
+        <div class="grid">
+          <div class="tile">
+            <h4>discord.py</h4>
+            <p>I have 2+ years of experience writing discord bots with the discord.py library</p>
+          </div>
+          <div class="tile">
+            <h4>JavaScript</h4>
+            <p>Frontend & backend development with Node.js and web apps.</p>
+          </div>
+          <div class="tile">
+            <h4>Web Development</h4>
+            <p>Frontend & backend development with Node.js and web apps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
